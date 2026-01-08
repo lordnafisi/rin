@@ -1,73 +1,43 @@
-/* Language system */
-const data = {
+// Background subtle motion (custom lightweight logic)
+let angle = 0;
+setInterval(() => {
+  angle += 0.15;
+  document.body.style.background =
+    `radial-gradient(circle at ${50 + Math.sin(angle)*6}% top, #0f2027, #000)`;
+}, 90);
+
+// Language content
+const content = {
   ar: {
-    title: "نبذة عني",
-    skill: "مهندس عكسى • مطور تطبيقات • Java • Python • C++",
-    about: "أنا أعمل في مجال الهندسة العكسية لتطبيقات الهاتف المحمول وأبني الأنظمة البرمجية باحتراف."
-  },
-  en: {
-    title: "ABOUT ME",
-    skill: "Reverse Engineer • App Developer • Java • Python • C++",
-    about: "I work in mobile reverse engineering and software development with strong system understanding."
+    about: "أنا مهندس عكسى لتطبيقات الموبايل ومطور برمجيات. أعمل في هندسة الأنظمة، التشفير، وأمن التطبيقات.",
+    translation: "باسم الله، وبقدرته — الحق لا يُغلب.",
+    workTitle: "أعمال احترافية مخصصة",
+    workText: "تشفير مخصص، أنظمة آمنة، سكربتات خاصة، أو حلول أمنية متقدمة حسب الطلب."
   },
   bn: {
-    title: "আমার সম্পর্কে",
-    skill: "রিভার্স ইঞ্জিনিয়ার • অ্যাপ ডেভেলপার • Java • Python • C++",
-    about: "আমি মোবাইল অ্যাপ রিভার্স ইঞ্জিনিয়ারিং ও সফটওয়্যার ডেভেলপমেন্ট নিয়ে কাজ করি।"
+    about: "আমি মোবাইল অ্যাপ রিভার্স ইঞ্জিনিয়ার ও ডেভেলপার। সিকিউর সিস্টেম, এনক্রিপশন ও অ্যাপ ইঞ্জিনিয়ারিং নিয়ে কাজ করি।",
+    translation: "আল্লাহর নামে, তাঁর কুদরতে—সত্য কখনো পরাজিত হয় না।",
+    workTitle: "কাস্টম ও প্রফেশনাল কাজ",
+    workText: "কাস্টম এনক্রিপশন, সিকিউর অ্যাপ বা প্রাইভেট স্ক্রিপ্টের জন্য যোগাযোগ করুন।"
+  },
+  en: {
+    about: "I’m a mobile reverse engineer and software developer focused on security, encryption, and system-level engineering.",
+    translation: "In the name of Allah, by His power — truth is never defeated.",
+    workTitle: "Professional & Custom Work",
+    workText: "Custom encryption, secure applications, private scripts, and advanced security solutions."
   },
   ur: {
-    title: "میرے بارے میں",
-    skill: "ریورس انجینئر • ایپ ڈیولپر • Java • Python • C++",
-    about: "میں موبائل ایپ ریورس انجینئرنگ اور سافٹ ویئر ڈیولپمنٹ میں کام کرتا ہوں۔"
+    about: "میں موبائل ایپس کا ریورس انجینئر اور سافٹ ویئر ڈیولپر ہوں، سیکیورٹی اور انکرپشن پر کام کرتا ہوں۔",
+    translation: "اللہ کے نام سے، اس کی قدرت سے — حق کبھی مغلوب نہیں ہوتا۔",
+    workTitle: "پیشہ ورانہ اور کسٹم کام",
+    workText: "کسٹم انکرپشن، محفوظ ایپس اور نجی اسکرپٹس کے لیے رابطہ کریں۔"
   }
 };
 
-const langSelect = document.getElementById("langSelect");
-function setLang(l){
-  document.getElementById("aboutTitle").innerText = data[l].title;
-  document.getElementById("skillText").innerText = data[l].skill;
-  document.getElementById("aboutText").innerText = data[l].about;
+function setLang(lang) {
+  document.getElementById("about").innerText = content[lang].about;
+  document.getElementById("translation").innerText = content[lang].translation;
+  document.getElementById("workTitle").innerText = content[lang].workTitle;
+  document.getElementById("workText").innerText = content[lang].workText;
+  document.documentElement.lang = lang;
 }
-langSelect.onchange = e => setLang(e.target.value);
-setLang("ar");
-
-/* Night-mode auto prayer-time (Maghrib → Fajr approx) */
-const hour = new Date().getHours();
-if (hour >= 18 || hour < 5) {
-  document.body.classList.add("night");
-}
-
-/* Particle system (custom lightweight algorithm) */
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
-let w, h, particles = [];
-
-function resize(){
-  w = canvas.width = window.innerWidth;
-  h = canvas.height = window.innerHeight;
-}
-window.addEventListener("resize", resize);
-resize();
-
-for (let i = 0; i < 80; i++) {
-  particles.push({
-    x: Math.random()*w,
-    y: Math.random()*h,
-    r: Math.random()*2 + 0.5,
-    s: Math.random()*0.3 + 0.1
-  });
-}
-
-function animate(){
-  ctx.clearRect(0,0,w,h);
-  ctx.fillStyle = "rgba(180,255,220,0.35)";
-  particles.forEach(p=>{
-    p.y -= p.s;
-    if(p.y < 0) p.y = h;
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fill();
-  });
-  requestAnimationFrame(animate);
-}
-animate();

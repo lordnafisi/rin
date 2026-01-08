@@ -4,49 +4,53 @@
   <meta charset="UTF-8">
   <title>About Me</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  
-  <div class="lang-switch">
-    <select id="langSelect">
-      <option value="ar">العربية</option>
-      <option value="en">English</option>
-      <option value="bn">বাংলা</option>
-      <option value="ur">اردو</option>
-    </select>
-  </div>
+<canvas id="particles"></canvas>
 
-  <main class="wrapper">
+<div class="lang-switch">
+  <select id="langSelect">
+    <option value="ar">العربية</option>
+    <option value="en">English</option>
+    <option value="bn">বাংলা</option>
+    <option value="ur">اردو</option>
+  </select>
+</div>
 
-    <h2 class="section-title" id="aboutTitle">نبذة عني</h2>
+<main class="wrapper">
 
-    <h1 class="name-glow" id="nameText">N A F I S I</h1>
+  <h2 id="aboutTitle">نبذة عني</h2>
 
-    <p class="skills" id="skillText">
-      مهندس عكسى • مطور تطبيقات • Java • Python • C++
-    </p>
+  <!-- Arabic Calligraphy SVG -->
+  <svg class="calligraphy" viewBox="0 0 600 200">
+    <path d="M50 120 Q150 20 300 100 T550 80"
+          fill="none" />
+  </svg>
 
-    <div class="divider"></div>
+  <h1 class="name-glow">N A F I S I</h1>
 
-    <p class="about" id="aboutText">
-      أنا أعمل في مجال الهندسة العكسية لتطبيقات الهاتف المحمول،
-      وأطوّر الأنظمة والتطبيقات بلغات متعددة مع فهم عميق للأمن والمنطق البرمجي.
-    </p>
+  <p class="skills" id="skillText">
+    مهندس عكسى • مطور تطبيقات • Java • Python • C++
+  </p>
 
-    <div class="divider"></div>
+  <div class="divider"></div>
 
-    <p class="ayat">
-      ﴿ وَقُل رَّبِّ زِدْنِي عِلْمًا ﴾
-    </p>
+  <p class="about" id="aboutText">
+    أنا أعمل في مجال الهندسة العكسية لتطبيقات الهاتف المحمول،
+    وأبني الأنظمة البرمجية بفهم عميق للأمن والمنطق.
+  </p>
 
-    <a class="telegram" href="https://t.me/LORD_NAFSI" target="_blank">
-      📲 Telegram: @LORD_NAFSI
-    </a>
+  <div class="divider"></div>
 
-  </main>
+  <p class="ayat">﴿ وَقُل رَّبِّ زِدْنِي عِلْمًا ﴾</p>
+
+  <a class="telegram" href="https://t.me/LORD_NAFSI" target="_blank">
+    📲 Telegram: @LORD_NAFSI
+  </a>
+
+</main>
 
 <script src="script.js"></script>
 </body>

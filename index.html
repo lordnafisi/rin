@@ -2,56 +2,61 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>About Me</title>
+  <title>Nafisi | Developer & Reverse Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<canvas id="particles"></canvas>
-
-<div class="lang-switch">
-  <select id="langSelect">
-    <option value="ar">العربية</option>
-    <option value="en">English</option>
-    <option value="bn">বাংলা</option>
-    <option value="ur">اردو</option>
-  </select>
+<!-- TOP ISLAMIC AYAH -->
+<div class="ayah-glow" id="ayah">
+  بِسْمِ ٱللَّٰهِ بِقُدْرَتِهِ ۚ ٱلْحَقُّ لَا يُغْلَبُ
 </div>
 
-<main class="wrapper">
+<!-- LANGUAGE SWITCH -->
+<div class="lang-switch">
+  <button onclick="setLang('ar')">AR</button>
+  <button onclick="setLang('bn')">BN</button>
+  <button onclick="setLang('en')">EN</button>
+  <button onclick="setLang('ur')">UR</button>
+</div>
 
-  <h2 id="aboutTitle">نبذة عني</h2>
+<!-- MAIN CARD -->
+<div class="card">
 
-  <!-- Arabic Calligraphy SVG -->
-  <svg class="calligraphy" viewBox="0 0 600 200">
-    <path d="M50 120 Q150 20 300 100 T550 80"
-          fill="none" />
-  </svg>
+  <h1 class="name-anim">Nafisi</h1>
 
-  <h1 class="name-glow">N A F I S I</h1>
-
-  <p class="skills" id="skillText">
-    مهندس عكسى • مطور تطبيقات • Java • Python • C++
+  <p class="about" id="about">
+    أنا مهندس عكسى لتطبيقات الموبايل ومطور برمجيات.
+    أعمل في هندسة الأنظمة، التشفير، وأمن التطبيقات.
   </p>
 
-  <div class="divider"></div>
-
-  <p class="about" id="aboutText">
-    أنا أعمل في مجال الهندسة العكسية لتطبيقات الهاتف المحمول،
-    وأبني الأنظمة البرمجية بفهم عميق للأمن والمنطق.
+  <p class="translation" id="translation">
+    اللهর নামে, তাঁর কুদরতে—সত্য কখনো পরাজিত হয় না।
   </p>
 
-  <div class="divider"></div>
+  <!-- CONTACT -->
+  <div class="contact">
+    📲 Telegram:
+    <a href="https://t.me/LORD_NAFSI" target="_blank">@LORD_NAFSI</a>
+  </div>
 
-  <p class="ayat">﴿ وَقُل رَّبِّ زِدْنِي عِلْمًا ﴾</p>
+  <!-- PAID WORK -->
+  <div class="work">
+    <h3 id="workTitle">Professional & Custom Work</h3>
+    <p id="workText">
+      Custom encryption, secure app implementation,
+      private scripts অথবা বিশেষ security system
+      তৈরি করাতে চাইলে সরাসরি যোগাযোগ করতে পারেন।
+    </p>
+    <p class="price">
+      ₹5000 (UPI) · $50 (PayPal)
+    </p>
+  </div>
 
-  <a class="telegram" href="https://t.me/LORD_NAFSI" target="_blank">
-    📲 Telegram: @LORD_NAFSI
-  </a>
-
-</main>
+</div>
 
 <script src="script.js"></script>
 </body>
-  </html>
+</html>

@@ -2,124 +2,131 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, sans-serif;
 }
 
 body {
-  min-height: 100vh;
   background: radial-gradient(circle at top, #0f2027, #000);
-  color: #fff;
+  color: #eaeaea;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
+  justify-content: flex-start;
+  padding: 20px;
 }
 
-/* AYAH BLOOD GLOW */
-.ayah-glow {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 20px;
+/* Dua */
+.dua {
+  font-family: 'Amiri', serif;
+  color: #ff3b3b;
   text-align: center;
-  color: #ff2b2b;
-  text-shadow:
-    0 0 10px #ff0000,
-    0 0 25px #b30000,
-    0 0 45px #660000;
+  margin-top: 20px;
+  font-size: 20px;
+  text-shadow: 0 0 15px rgba(255,0,0,0.6);
   animation: pulse 3s infinite;
 }
 
-@keyframes pulse {
-  0% { opacity: 0.7; }
-  50% { opacity: 1; }
-  100% { opacity: 0.7; }
+.dua-translation {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 6px;
+  text-shadow: none;
 }
 
-/* LANGUAGE SWITCH */
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Language Switch */
 .lang-switch {
-  margin-top: 10px;
+  margin: 20px 0;
 }
 
 .lang-switch button {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.3);
-  color: #fff;
-  padding: 5px 10px;
-  margin: 0 3px;
+  border: 1px solid #444;
+  color: #ccc;
+  padding: 6px 10px;
+  margin: 0 4px;
   border-radius: 6px;
   cursor: pointer;
 }
 
 .lang-switch button:hover {
-  background: rgba(255,255,255,0.1);
+  border-color: #00eaff;
+  color: #00eaff;
 }
 
-/* CARD */
+/* Card */
 .card {
-  margin-top: 60px;
-  width: 90%;
-  max-width: 420px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.04);
   backdrop-filter: blur(12px);
   border-radius: 18px;
-  padding: 30px;
+  padding: 30px 24px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* Name */
+.name {
   text-align: center;
-}
-
-/* NAME ANIMATION */
-.name-anim {
   font-size: 36px;
-  letter-spacing: 2px;
-  background: linear-gradient(90deg, #7f5cff, #00ffd5);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 4s linear infinite;
+  margin-bottom: 14px;
 }
 
-@keyframes shine {
-  from { background-position: 0%; }
-  to { background-position: 200%; }
+.glow {
+  color: #00eaff;
+  text-shadow:
+    0 0 10px rgba(0,234,255,0.6),
+    0 0 30px rgba(0,234,255,0.4);
 }
 
+/* About */
 .about {
-  margin-top: 15px;
-  line-height: 1.6;
-  opacity: 0.9;
-}
-
-.translation {
-  margin-top: 12px;
+  text-align: center;
   font-size: 14px;
-  opacity: 0.7;
+  line-height: 1.7;
+  color: #ccc;
+  margin-bottom: 20px;
 }
 
-/* CONTACT */
+/* Contact */
 .contact {
-  margin-top: 25px;
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 14px;
 }
 
 .contact a {
-  color: #00ffd5;
+  color: #00eaff;
   text-decoration: none;
 }
 
-.contact a:hover {
-  text-shadow: 0 0 10px #00ffd5;
-}
-
-/* WORK */
+/* Work */
 .work {
-  margin-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
 }
 
-.work h3 {
+.work h2 {
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
-.price {
-  margin-top: 8px;
-  color: #ffd700;
+.work p {
+  font-size: 13px;
+  color: #bbb;
+  line-height: 1.6;
 }
+
+.price {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ffd700;
+  }

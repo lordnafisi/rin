@@ -1,62 +1,59 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nafisi | Developer & Reverse Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- TOP ISLAMIC AYAH -->
-<div class="ayah-glow" id="ayah">
-  بِسْمِ ٱللَّٰهِ بِقُدْرَتِهِ ۚ ٱلْحَقُّ لَا يُغْلَبُ
-</div>
-
-<!-- LANGUAGE SWITCH -->
-<div class="lang-switch">
-  <button onclick="setLang('ar')">AR</button>
-  <button onclick="setLang('bn')">BN</button>
-  <button onclick="setLang('en')">EN</button>
-  <button onclick="setLang('ur')">UR</button>
-</div>
-
-<!-- MAIN CARD -->
-<div class="card">
-
-  <h1 class="name-anim">Nafisi</h1>
-
-  <p class="about" id="about">
-    أنا مهندس عكسى لتطبيقات الموبايل ومطور برمجيات.
-    أعمل في هندسة الأنظمة، التشفير، وأمن التطبيقات.
-  </p>
-
-  <p class="translation" id="translation">
-    اللهর নামে, তাঁর কুদরতে—সত্য কখনো পরাজিত হয় না।
-  </p>
-
-  <!-- CONTACT -->
-  <div class="contact">
-    📲 Telegram:
-    <a href="https://t.me/LORD_NAFSI" target="_blank">@LORD_NAFSI</a>
+  <!-- Top Islamic Phrase -->
+  <div class="dua">
+    بِسْمِ اللهِ بِقُدْرَتِهِ، الْحَقُّ لَا يُغْلَب
+    <span class="dua-translation">
+      In the name of Allah, by His power — truth is never defeated.
+    </span>
   </div>
 
-  <!-- PAID WORK -->
-  <div class="work">
-    <h3 id="workTitle">Professional & Custom Work</h3>
-    <p id="workText">
-      Custom encryption, secure app implementation,
-      private scripts অথবা বিশেষ security system
-      তৈরি করাতে চাইলে সরাসরি যোগাযোগ করতে পারেন।
-    </p>
-    <p class="price">
-      ₹5000 (UPI) · $50 (PayPal)
-    </p>
+  <!-- Language Switch -->
+  <div class="lang-switch">
+    <button data-lang="ar">AR</button>
+    <button data-lang="bn">BN</button>
+    <button data-lang="en">EN</button>
+    <button data-lang="ur">UR</button>
   </div>
 
-</div>
+  <!-- Main Card -->
+  <main class="card">
 
-<script src="script.js"></script>
+    <h1 class="name glow">Nafisi</h1>
+
+    <p class="about" id="about-text">
+      أنا مهندس عكسي لتطبيقات الموبايل ومطور برمجيات.
+      أعمل في هندسة الأنظمة، التشفير، وأمن التطبيقات.
+    </p>
+
+    <div class="contact">
+      📲 Telegram: <a href="https://t.me/LORD_NAFSI" target="_blank">@LORD_NAFSI</a>
+    </div>
+
+    <section class="work">
+      <h2>Professional & Custom Work</h2>
+      <p>
+        Custom encryption, secure app implementation, private scripts
+        অথবা বিশেষ security system তৈরি করতে চাইলে সরাসরি যোগাযোগ করতে পারেন।
+      </p>
+      <p class="price">
+        ₹5000 (UPI) · $50 (PayPal)
+      </p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
-</html>
+  </html>

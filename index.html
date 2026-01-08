@@ -8,12 +8,27 @@
 </head>
 <body>
 
-<!-- TOP AYAH -->
-<header id="ayah">
-  بِسْمِ ٱللَّٰهِ بِقُدْرَتِهِ — ٱلْحَقُّ لَا يُغْلَبُ
-</header>
 
-<!-- LANGUAGE -->
+<div class="ayah-wrap">
+<svg viewBox="0 0 1200 120" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <filter id="redGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <text x="50%" y="70%" text-anchor="middle"
+        filter="url(#redGlow)"
+        class="ayah-text">
+    بِسْمِ ٱللَّٰهِ بِقُدْرَتِهِ — ٱلْحَقُّ لَا يُغْلَبُ
+  </text>
+</svg>
+</div>
+
+
 <div class="lang">
   <select id="langSelect">
     <option value="ar">العربية</option>
@@ -23,11 +38,10 @@
   </select>
 </div>
 
-<!-- MAIN -->
+
 <main>
 
   <h1 id="name">Nafisi</h1>
-
   <p id="role">Mobile Reverse Engineer · Secure Systems</p>
 
   <section id="about"></section>

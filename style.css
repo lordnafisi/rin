@@ -2,35 +2,30 @@
   --bg: #050505;
   --fg: #eaeaea;
   --muted: #9a9a9a;
-  --accent: #b30000;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
   font-family: system-ui, sans-serif;
-  min-height: 100vh;
 }
 
-header {
-  text-align: center;
-  padding: 18px;
-  color: var(--accent);
-  font-size: 18px;
+/* SVG AYAH */
+.ayah-wrap {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.ayah-text {
+  fill: #b00000;
+  font-size: 32px;
   letter-spacing: 1px;
-  opacity: 0;
-  animation: ayahIn 1.8s ease forwards;
 }
 
-@keyframes ayahIn {
-  to { opacity: 1; }
-}
-
+/* LANG */
 .lang {
   position: fixed;
   top: 14px;
@@ -44,9 +39,10 @@ header {
   padding: 6px;
 }
 
+/* MAIN */
 main {
   max-width: 620px;
-  margin: 80px auto;
+  margin: 90px auto;
   padding: 0 20px;
 }
 
@@ -54,16 +50,12 @@ main {
   font-size: 42px;
   margin-bottom: 6px;
   opacity: 0;
-  transform: translateY(12px);
+  transform: translateY(14px);
   animation: nameIn 1.2s ease forwards;
-  animation-delay: 1s;
 }
 
 @keyframes nameIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 #role {
@@ -81,7 +73,7 @@ main {
   margin-bottom: 40px;
   color: var(--fg);
   text-decoration: none;
-  border-bottom: 1px solid var(--accent);
+  border-bottom: 1px solid #b00000;
 }
 
 .work {
@@ -89,9 +81,7 @@ main {
   padding-top: 24px;
 }
 
-.work h2 {
-  margin-bottom: 10px;
-}
+.work h2 { margin-bottom: 10px; }
 
 .price {
   color: #c9a44a;

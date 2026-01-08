@@ -1,27 +1,38 @@
 const i18n = {
   ar: {
     dir: "rtl",
-    about: "أنا مهندس عكسي لتطبيقات الهاتف المحمول، أعمل في هندسة الأنظمة، التشفير، وبناء حلول آمنة.",
+    about:
+      "أنا مهندس عكسي لتطبيقات الهاتف المحمول، أعمل في هندسة الأنظمة، التشفير، وبناء حلول آمنة.",
     workTitle: "أعمال احترافية",
-    workText: "تشفير مخصص، أنظمة آمنة، وتنفيذ حلول خاصة عند الطلب."
+    workText:
+      "تنفيذ تشفير مخصص، أنظمة آمنة، سكربتات خاصة، وحلول أمنية متقدمة عند الطلب."
   },
+
   bn: {
     dir: "ltr",
-    about: "আমি মোবাইল অ্যাপ রিভার্স ইঞ্জিনিয়ার। সিকিউর সিস্টেম, এনক্রিপশন এবং কাস্টম সমাধান নিয়ে কাজ করি।",
+    about:
+      "আমি মোবাইল অ্যাপ রিভার্স ইঞ্জিনিয়ার। সিকিউর সিস্টেম, এনক্রিপশন এবং কাস্টম সমাধান নিয়ে কাজ করি।",
     workTitle: "প্রফেশনাল কাজ",
-    workText: "কাস্টম এনক্রিপশন, নিরাপদ অ্যাপ এবং প্রাইভেট সমাধান।"
+    workText:
+      "কাস্টম এনক্রিপশন, সিকিউর অ্যাপ ইমপ্লিমেন্টেশন, প্রাইভেট স্ক্রিপ্ট এবং বিশেষ সিকিউরিটি সিস্টেম তৈরি করা হয়।"
   },
+
   en: {
     dir: "ltr",
-    about: "I am a mobile reverse engineer focused on secure systems, encryption, and custom solutions.",
+    about:
+      "I am a mobile reverse engineer focused on secure systems, encryption, and custom implementations.",
     workTitle: "Professional Work",
-    workText: "Custom encryption, secure implementations, and private solutions."
+    workText:
+      "Custom encryption, secure app implementation, private scripts, and specialized security systems."
   },
+
   ur: {
     dir: "rtl",
-    about: "میں موبائل ریورس انجینئر ہوں، سیکیور سسٹمز اور انکرپشن پر کام کرتا ہوں۔",
+    about:
+      "میں موبائل ریورس انجینئر ہوں، محفوظ نظام، انکرپشن اور کسٹم حل پر کام کرتا ہوں۔",
     workTitle: "پیشہ ورانہ خدمات",
-    workText: "کسٹم انکرپشن اور محفوظ حل دستیاب ہیں۔"
+    workText:
+      "کسٹم انکرپشن، محفوظ ایپ امپلیمنٹیشن، نجی اسکرپٹس اور خصوصی سیکیورٹی سسٹمز۔"
   }
 };
 

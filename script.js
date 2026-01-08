@@ -1,27 +1,42 @@
-const content = {
+const i18n = {
   ar: {
     dir: "rtl",
-    text: "أنا مهندس عكسي لتطبيقات الموبايل ومطور برمجيات. أعمل في هندسة الأنظمة، التشفير، وأمن التطبيقات."
+    about: "أنا مهندس عكسي لتطبيقات الهاتف المحمول، أعمل في هندسة الأنظمة، التشفير، وبناء حلول آمنة.",
+    workTitle: "أعمال احترافية",
+    workText: "تشفير مخصص، أنظمة آمنة، وتنفيذ حلول خاصة عند الطلب."
   },
   bn: {
     dir: "ltr",
-    text: "আমি একজন মোবাইল অ্যাপস রিভার্স ইঞ্জিনিয়ার ও সফটওয়্যার ডেভেলপার। সিস্টেম, এনক্রিপশন এবং অ্যাপ সিকিউরিটি নিয়ে কাজ করি।"
+    about: "আমি মোবাইল অ্যাপ রিভার্স ইঞ্জিনিয়ার। সিকিউর সিস্টেম, এনক্রিপশন এবং কাস্টম সমাধান নিয়ে কাজ করি।",
+    workTitle: "প্রফেশনাল কাজ",
+    workText: "কাস্টম এনক্রিপশন, নিরাপদ অ্যাপ এবং প্রাইভেট সমাধান।"
   },
   en: {
     dir: "ltr",
-    text: "I am a mobile application reverse engineer and software developer. I work with systems, encryption, and application security."
+    about: "I am a mobile reverse engineer focused on secure systems, encryption, and custom solutions.",
+    workTitle: "Professional Work",
+    workText: "Custom encryption, secure implementations, and private solutions."
   },
   ur: {
     dir: "rtl",
-    text: "میں موبائل ایپس کا ریورس انجینئر اور سافٹ ویئر ڈویلپر ہوں۔ سسٹمز، انکرپشن اور ایپ سیکیورٹی پر کام کرتا ہوں۔"
+    about: "میں موبائل ریورس انجینئر ہوں، سیکیور سسٹمز اور انکرپشن پر کام کرتا ہوں۔",
+    workTitle: "پیشہ ورانہ خدمات",
+    workText: "کسٹم انکرپشن اور محفوظ حل دستیاب ہیں۔"
   }
 };
 
-document.querySelectorAll(".lang-switch button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const lang = btn.dataset.lang;
-    document.documentElement.lang = lang;
-    document.documentElement.dir = content[lang].dir;
-    document.getElementById("about-text").innerText = content[lang].text;
-  });
-});
+const select = document.getElementById("langSelect");
+const about = document.getElementById("about");
+const workTitle = document.getElementById("workTitle");
+const workText = document.getElementById("workText");
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  document.documentElement.dir = i18n[lang].dir;
+  about.textContent = i18n[lang].about;
+  workTitle.textContent = i18n[lang].workTitle;
+  workText.textContent = i18n[lang].workText;
+}
+
+select.addEventListener("change", e => setLang(e.target.value));
+setLang("ar");

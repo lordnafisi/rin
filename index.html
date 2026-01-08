@@ -1,59 +1,49 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nafisi | Developer & Reverse Engineer</title>
-
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Nafisi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- Top Islamic Phrase -->
-  <div class="dua">
-    بِسْمِ اللهِ بِقُدْرَتِهِ، الْحَقُّ لَا يُغْلَب
-    <span class="dua-translation">
-      In the name of Allah, by His power — truth is never defeated.
-    </span>
-  </div>
+<!-- TOP AYAH -->
+<header id="ayah">
+  بِسْمِ ٱللَّٰهِ بِقُدْرَتِهِ — ٱلْحَقُّ لَا يُغْلَبُ
+</header>
 
-  <!-- Language Switch -->
-  <div class="lang-switch">
-    <button data-lang="ar">AR</button>
-    <button data-lang="bn">BN</button>
-    <button data-lang="en">EN</button>
-    <button data-lang="ur">UR</button>
-  </div>
+<!-- LANGUAGE -->
+<div class="lang">
+  <select id="langSelect">
+    <option value="ar">العربية</option>
+    <option value="bn">বাংলা</option>
+    <option value="en">English</option>
+    <option value="ur">اردو</option>
+  </select>
+</div>
 
-  <!-- Main Card -->
-  <main class="card">
+<!-- MAIN -->
+<main>
 
-    <h1 class="name glow">Nafisi</h1>
+  <h1 id="name">Nafisi</h1>
 
-    <p class="about" id="about-text">
-      أنا مهندس عكسي لتطبيقات الموبايل ومطور برمجيات.
-      أعمل في هندسة الأنظمة، التشفير، وأمن التطبيقات.
-    </p>
+  <p id="role">Mobile Reverse Engineer · Secure Systems</p>
 
-    <div class="contact">
-      📲 Telegram: <a href="https://t.me/LORD_NAFSI" target="_blank">@LORD_NAFSI</a>
-    </div>
+  <section id="about"></section>
 
-    <section class="work">
-      <h2>Professional & Custom Work</h2>
-      <p>
-        Custom encryption, secure app implementation, private scripts
-        অথবা বিশেষ security system তৈরি করতে চাইলে সরাসরি যোগাযোগ করতে পারেন।
-      </p>
-      <p class="price">
-        ₹5000 (UPI) · $50 (PayPal)
-      </p>
-    </section>
+  <a class="contact" href="https://t.me/LORD_NAFSI" target="_blank">
+    Telegram — @LORD_NAFSI
+  </a>
 
-  </main>
+  <section class="work">
+    <h2 id="workTitle"></h2>
+    <p id="workText"></p>
+    <p class="price">₹5000 · $50</p>
+  </section>
 
-  <script src="script.js"></script>
+</main>
+
+<script src="script.js"></script>
 </body>
-  </html>
+</html>

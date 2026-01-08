@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #0b3d2e, #000000);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e6f2ee;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+.card {
+  max-width: 420px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 18px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+}
+
+.name {
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+.role {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #b5d7c7;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+  margin: 22px 0;
+}
+
+.ayat {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #f1e9c9;
+}
+
+.ayat span {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #c8d9cf;
+}
+
+.about {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d6ebe3;
+}
+
+.links {
+  margin-top: 24px;
+}
+
+.links a {
+  display: inline-block;
+  margin: 6px;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #ffffff;
+  background: rgba(255,255,255,0.12);
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.links a:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.footer {
+  margin-top: 26px;
+  font-size: 12px;
+  color: #9fbfb3;
+  }
